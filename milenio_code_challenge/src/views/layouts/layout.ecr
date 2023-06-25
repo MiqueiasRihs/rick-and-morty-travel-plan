@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plano de viagem Rick and Morty</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css"/>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/img/logo.png" alt="logo">
+        </div>
+        <div class="title">
+            <h3>Plano de viagem pelo universo de Rick and Morty!</h3>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <a href="/">
+                    <li>
+                        Novo plano
+                    </li>
+                </a>
+                <a href="/meus_planos?expand=true">
+                    <li>
+                        Planos salvos
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <%= content %>
+    </div>
+</body>
+</html>

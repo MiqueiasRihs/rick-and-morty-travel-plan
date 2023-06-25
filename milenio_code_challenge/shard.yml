@@ -1,0 +1,40 @@
+name: milenio_code_challenge
+version: 0.1.0
+
+authors:
+  - Miqueias <miqueias.rihs@gmail.com>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+  jennifer:
+    github: imdrasil/jennifer.cr
+    version: "~> 0.13.0"
+  
+  db:
+    github: crystal-lang/crystal-db
+
+  pg:
+    github: will/crystal-pg
+
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.4.2
+  
+  json_mapping:
+    github: crystal-lang/json_mapping.cr
+
+  graphql:
+    github: graphql-crystal/graphql
+
+  spec-kemal:
+    github: kemalcr/spec-kemal
+
+targets:
+  milenio_code_challenge:
+    main: src/milenio_code_challenge.cr
+
+crystal: 1.8.2
+
+license: MIT

@@ -1,0 +1,29 @@
+
+<div class="all-locations col-md-12">
+    <span>Selecione abaixo os lugares que deseja visitar:</span>
+    <div class="list-locations row">
+        <% list_travels.each do |item| %>
+            <% if places != nil %>
+                <% if places.includes?(item["id"].to_s.to_i) %>
+                    <input checked value=<%= item["id"] %> id=<%= "location_#{item["id"]}" %> type="checkbox" name=<%= "location_name_#{item["id"]}" %> />
+                <% else %>
+                    <input value=<%= item["id"] %> id=<%= "location_#{item["id"]}" %> type="checkbox" name=<%= "location_name_#{item["id"]}" %> />
+                <% end %>
+            <% end %>
+            <label class="location col-lg-2" for=<%= "location_#{item["id"]}" %>>
+                <div class="image">
+                    <img src="/img/no_img_available.png" alt="loc_image">
+                </div>
+                <div class="location-name">
+                    <%= item["name"] %>
+                </div>
+            </label>
+        <% end %>
+    </div>
+    <div class="save row">
+        <div class="button-save">
+            <button onclick="saveEditTravelPlan(<%= id %>)" type="button" class="btn btn-success btn-lg">Salvar</button>
+        </div>
+    </div>
+</div>
+    

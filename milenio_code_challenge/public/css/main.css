@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: url('/img/star_sky_background.jpg'); */
+    color: #fff;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.logo, .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 150px;
+}
+
+.title h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.navbar-fixed {
+    position: fixed;
+}
+  
+nav {
+width: 100%;
+color: #fff !important;
+background: #000;
+font-weight: bold;
+letter-spacing: 0.025em;
+margin-top: 25px;
+}
+
+nav ul {
+text-align: center;
+margin: 0;
+}
+
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li {
+display: inline-block;
+padding: 0 3em;
+line-height: 3em;
+cursor: pointer;
+}
+
+nav ul li:hover {
+background: #00b5cd;
+}
+
+.active {
+    background: #00b5cd;
+}
+
+/* --------------- */
+
+.all-locations {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.all-locations span {
+    left: 18px;
+    position: relative;
+}
+
+.all-locations .list-locations {
+    gap: 46px;
+    margin: 10px 0 50px;
+    justify-content: center;
+}
+
+.all-locations .location {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: solid 1px #000;
+}
+
+.all-locations .list-locations input[type=checkbox] {
+    display: none;
+}
+    
+.all-locations .list-locations input:checked + label {
+    border: solid 5px #00b5cd;
+    color: #00b5cd;
+}
+
+.all-locations .location .image {
+    display: flex;
+    justify-content: center;
+}
+
+.all-locations .location .image img {
+    height: 130px;
+}
+
+.all-locations .location .location-name {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.all-locations .save .button-save {
+    float: right;
+    display: grid;
+}
+
+
+/* -------------- */
+
+.saved-list-locations {
+    background-color: #fff;
+    gap: 30px;
+    margin: 10px 0 50px;
+    justify-content: center;
+    padding: 30px 20px;
+    border-radius: 4px;
+}
+
+.saved-list-locations .saved-location-details {
+    color: #000;
+    font-weight: 600;
+}
+
+.saved-list-locations .saved-location-details {
+    overflow: auto;
+}
+
+.saved-list-locations .saved-location-details .location-id {
+    float: left;
+}
+
+.saved-list-locations .saved-location-details .edit-delete {
+    display: flex;
+    gap: 15px;
+    float: right;
+}
+
+.saved-list-locations .saved-location-details .edit-delete, .edit,
+.saved-list-locations .saved-location-details .edit-delete, .delete {
+    cursor: pointer;
+}
+
+.header-options {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    justify-content: space-between;
+}
+
+.header-options .subtitle {
+    float: left;
+}
+
+.header-options .optimize-option {
+    float: right;
+}
+
+.header-options .optimize-option a {
+    color: #fff;
+    font-weight: 600;
+}
