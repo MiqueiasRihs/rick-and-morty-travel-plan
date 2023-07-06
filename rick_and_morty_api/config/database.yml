@@ -6,13 +6,13 @@ default: &default
 
 development:
   <<: *default
-  db: milenio
+  db: rickandmorty
 
 test:
   <<: *default
-  db: milenio
+  db: rickandmorty
 
 production:
   <<: *default
-  db: milenio
+  db: rickandmorty
 

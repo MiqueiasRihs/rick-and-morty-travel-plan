@@ -23,7 +23,7 @@ WORKDIR /tmp/
 RUN sudo mv /etc/postgresql/14/main/pg_hba.conf /etc/postgresql/14/main/pg_hba.conf.bak
 COPY pg_hba.conf /etc/postgresql/14/main/pg_hba.conf 
 
-WORKDIR /home/dev/milenio_code_challenge
+WORKDIR /home/dev/rick_and_morty_api
 RUN sudo chown :1024 . && sudo chmod 775 . && sudo chmod g+s .
 
-CMD sudo service postgresql start && shards install && make sam db:setup && crystal run src/milenio_code_challenge.cr
+CMD sudo service postgresql start && shards install && make sam db:setup && crystal run src/rick_and_morty_api.cr

@@ -1,4 +1,4 @@
-name: milenio_code_challenge
+name: rick_and_morty_api
 version: 0.1.0
 
 authors:
@@ -32,8 +32,8 @@ dependencies:
     github: kemalcr/spec-kemal
 
 targets:
-  milenio_code_challenge:
-    main: src/milenio_code_challenge.cr
+  rick_and_morty_api:
+    main: src/rick_and_morty_api.cr
 
 crystal: 1.8.2
 

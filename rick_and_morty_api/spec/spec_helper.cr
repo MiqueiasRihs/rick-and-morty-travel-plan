@@ -1,6 +1,6 @@
 require "spec"
 require "spec-kemal"
-require "../src/milenio_code_challenge"
+require "../src/rick_and_morty_api"
 
 Spec.before_each do
     config = Kemal.config

@@ -1,4 +1,4 @@
-# Documentation for Rick and Morty API - Milenio
+# Documentation for Rick and Morty API
 
 The following document describes the API methods available for the system.
 

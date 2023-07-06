@@ -1,7 +1,7 @@
 require "./spec_helper"
 require "http/client"
 
-describe "MilenioCodeChallenge" do
+describe "RickAndMortyAPI" do
   
   it "Empty database" do
     Travels.all.delete()
