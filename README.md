@@ -1,66 +1,66 @@
-# Milenio Code Challange - Planos de Viagem Rick and Morty
+# Rick and Morty Travel Plans
 
-Este projeto consiste em uma API que gerencia planos de viagem interdimensional no universo de Rick and Morty, desenvolvida utilizando as seguintes ferramentas: Crystal, Kemal, ORM Jennifer, GraphQL e Docker. A API implementa métodos HTTP para criar, visualizar, atualizar e excluir planos de viagem, bem como para otimizar e expandir a resposta dessas operações.
+This project is an API that manages interdimensional travel plans in the Rick and Morty universe. It is developed using the following tools: Crystal, Kemal, ORM Jennifer, GraphQL, and Docker. The API implements HTTP methods to create, view, update, and delete travel plans, as well as to optimize and expand the response of these operations.
 
-## Métodos disponíveis
+## Available Methods
 
 ### POST /travel_plans
 
-Este método recebe um objeto JSON contendo um array de inteiros chamado "travel_stops". Ele cria um novo plano de viagem com esse array e retorna o ID do novo plano de viagem.
+This method receives a JSON object containing an array of integers called "travel_stops". It creates a new travel plan with this array and returns the ID of the new travel plan.
 
 ### GET /travel_plans
 
-Este método retorna uma lista de todos os planos de viagem armazenados no sistema. Ele também recebe dois parâmetros opcionais chamados "optimize" e "expand" que são usados para otimizar e detalhar a resposta.
+This method returns a list of all the travel plans stored in the system. It also accepts two optional parameters called "optimize" and "expand" that are used to optimize and expand the response.
 
 ### GET /travel_plans/:id
 
-Este método retorna um plano de viagem específico com base em seu ID. Ele também recebe dois parâmetros opcionais chamados "optimize" e "expand" que são usados para otimizar e detalhar a resposta.
+This method returns a specific travel plan based on its ID. It also accepts two optional parameters called "optimize" and "expand" that are used to optimize and expand the response.
 
 ### PUT /travel_plans/:id
 
-Este método atualiza um plano de viagem específico com base em seu ID. Ele recebe um objeto JSON contendo um array de inteiros chamado "travel_stops".
+This method updates a specific travel plan based on its ID. It receives a JSON object containing an array of integers called "travel_stops".
 
 ### PUT /travel_plans/:id/append
 
-Este método atualiza uma lista de paradas a um plano de viagem específico com base em seu ID. Ele recebe um objeto JSON contendo um array de inteiros chamado "travel_stops".
+This method appends a list of stops to a specific travel plan based on its ID. It receives a JSON object containing an array of integers called "travel_stops".
 
 ### DELETE /travel_plans/:id
 
-Este método exclui um plano de viagem específico com base em seu ID.
+This method deletes a specific travel plan based on its ID.
 
-## Parâmetros opcionais
+## Optional Parameters
 
-Os seguintes parâmetros opcionais podem ser incluídos nas solicitações GET que recebem um ID de plano de viagem:
+The following optional parameters can be included in GET requests that receive a travel plan ID:
 
 ### optimize
 
-Quando recebido, a API deve retornar o array "travel_stops" reordenado para minimizar o número de saltos interdimensionais e organizar as paradas de viagem indo dos locais menos populares aos mais populares. Para fazer isso, todos os locais na mesma dimensão devem ser visitados antes de saltar para um local em outra dimensão. Dentro da mesma dimensão, os locais devem ser visitados em ordem crescente de popularidade e, em caso de empate, em ordem alfabética de nome. A popularidade de um local é calculada somando o número de episódios em que cada residente desse local apareceu.
+When received, the API should return the "travel_stops" array reordered to minimize the number of interdimensional jumps and organize the travel stops from least popular to most popular locations. To do this, all locations in the same dimension must be visited before jumping to a location in another dimension. Within the same dimension, locations should be visited in ascending order of popularity, and in case of a tie, in alphabetical order of name. The popularity of a location is calculated by summing the number of episodes in which each resident of that location appeared.
 
 ### expand
 
-Quando recebido, a API deve retornar os detalhes completos sobre as paradas de viagem, incluindo informações sobre cada local visitado.
+When received, the API should return full details about the travel stops, including information about each visited location.
 
 ## Front-End
 
-Existe um simples front-end para esta aplicação na rota raiz. Foi utilizado HTML, CSS, Bootstrap e JavaScript para construí-lo. Eu também tentei extrair as imagens no site do fadom mas por algum motivo as imagens de lá não estava sendo renderizado no meu HTML, sem isso ficou mais complexo trazer as imagens da localizações, mas acredito que o front ficou bem legal e bonito.
+There is a simple front-end for this application at the root route. It was built using HTML, CSS, Bootstrap, and JavaScript. I also tried to fetch the images from the Fandom website, but for some reason, the images there were not being rendered in my HTML. Without them, it became more complex to fetch the images of the locations, but I believe the front-end looks nice and beautiful.
 
-## Documentação completa
+## Complete Documentation
 
-A documentação completa da API, incluindo exemplos de solicitações e respostas para cada método, pode ser encontrada no arquivo src/docs/v1/api-documentation.md neste repositório e também no endereço  [/docs](localhos:3000/docs).
+The complete documentation of the API, including examples of requests and responses for each method, can be found in the file src/docs/v1/api-documentation.md in this repository and also at the address [/docs](localhos:3000/docs).
 
-## Executando o projeto
+## Running the Project
 
-Para executar o projeto, siga as etapas abaixo:
+To run the project, follow the steps below:
 
-1. Clone este repositório em sua máquina local
-2. Com o Docker instalado, rode o comando `docker-compose up`
+1. Clone this repository to your local machine.
+2. With Docker installed, run the command `docker-compose up`.
 
-O servidor estará disponível em [http://localhost:3000](http://localhost:3000/).
+The server will be available at [http://localhost:3000](http://localhost:3000/).
 
-## Testando o projeto
+## Testing the Project
 
-Para testar o projeto, siga as etapas abaixo:
+To test the project, follow the steps below:
 
-1. Na raiz do prjeto kemal rode o comando `KEMAL_ENV=test crystal spec`
+1. In the root of the Kemal project, run the command `KEMAL_ENV=test crystal spec`.
 
-Os testes unitários e de integração serão executados e seus resultados serão exibidos no console.
+The unit and integration tests will be executed, and the results will be displayed in the console.
