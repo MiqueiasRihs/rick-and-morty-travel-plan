@@ -26,4 +26,4 @@ COPY pg_hba.conf /etc/postgresql/14/main/pg_hba.conf
 WORKDIR /home/dev/rick_and_morty_api
 RUN sudo chown :1024 . && sudo chmod 775 . && sudo chmod g+s .
 
-CMD sudo service postgresql start && shards install && make sam db:setup && crystal run src/rick_and_morty_api.cr
+CMD sudo service postgresql start && shards install && make sam db:setup && KEMAL_ENV=test crystal spec && crystal run src/rick_and_morty_api.cr
